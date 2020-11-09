@@ -1,6 +1,8 @@
 package helpers;
 
+import config.WebDriverConfig;
 import io.qameta.allure.Attachment;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -12,6 +14,9 @@ import java.nio.charset.StandardCharsets;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class AttachmentHelper {
+
+    static final WebDriverConfig config = ConfigFactory.newInstance().create(WebDriverConfig.class);
+
     @Attachment(value = "{attachName}", type = "text/plain")
     public static String attachAsText(String attachName, String message) {
         return message;
@@ -37,7 +42,7 @@ public class AttachmentHelper {
 
     public static String getWebVideoUrl() {
         try {
-            return new URL(System.getProperty("video_storage_url") + getSessionId() + ".mp4") + "";
+            return new URL(config.video_storage_url() + getSessionId() + ".mp4") + "";
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

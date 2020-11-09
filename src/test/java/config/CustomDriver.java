@@ -28,7 +28,6 @@ public class CustomDriver implements WebDriverProvider {
     public WebDriver createDriver(DesiredCapabilities capabilities) {
 
 
-
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         capabilities.setCapability("videoFrameRate", 24);
@@ -65,7 +64,7 @@ public class CustomDriver implements WebDriverProvider {
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--disable-infobars");
-        chromeOptions.addArguments("--lang=ru");
+        chromeOptions.addArguments("--lang=ru-ru");
         return chromeOptions;
     }
 

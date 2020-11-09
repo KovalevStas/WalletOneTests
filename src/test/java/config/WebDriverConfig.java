@@ -16,31 +16,12 @@ public interface WebDriverConfig extends Config {
     @Key("webdriver.browser.name")
     BrowserName browserName();
 
-    @DefaultValue("CHROME")
-    @Key("webdriver.browser.version")
-    String browserVersion();
-
     @DefaultValue("false")
     @Key("webdriver.remote")
     boolean remote();
 
     @Key("webdriver.remote.url")
     String remoteUrl();
-
-    @Key("login")
-    String login();
-
-    @Key("password")
-    String password();
-
-    @Key("title")
-    String title();
-
-    @Key("body")
-    String body();
-
-    @Key("repository")
-    String repository();
 
     @Key("url")
     String url();
