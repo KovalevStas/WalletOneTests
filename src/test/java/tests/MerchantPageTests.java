@@ -7,8 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 @Owner("Kovalev Stanislav")
@@ -19,9 +18,9 @@ public class MerchantPageTests extends TestBase {
     @Test
     public void openMerchantPageTest() {
 
-        step("Открываем страницу Единой кассы", () -> {
-            open("merchant/");
-        });
+        step("Открываем страницу Единой кассы", () ->
+                open("merchant/")
+        );
         step("Проверяем наличие кнопки \"Подключить ваш бизнес\"", () -> {
             $(".header__btn_business").shouldBe(visible);
         });
@@ -37,7 +36,7 @@ public class MerchantPageTests extends TestBase {
 
         step("Выполняем переход по кнопке \"Единый кошелек\"", () -> {
             $("#logo-select").shouldBe(visible).hover();
-            $("#logo-select").$(byText("Единый кошелёк")).waitUntil(visible, 2000);
+            sleep(1000);
             $("#logo-select").$(byText("Единый кошелёк")).click();
         });
 

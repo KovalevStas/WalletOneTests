@@ -15,9 +15,9 @@ public class DemoShopTests extends TestBase {
     @DisplayName("Проверока демо магазина с успешной оплатой")
     @Test
     public void TestCardRubPositiveTest() {
-        step("Открываем главную страницу", () -> {
-            open("merchant/");
-        });
+        step("Открываем главную страницу", () ->
+                open("merchant/")
+        );
 
         step("Нажатие кнопки \"Купить\"", () -> {
             $(".demo__item_sweater form").click();
