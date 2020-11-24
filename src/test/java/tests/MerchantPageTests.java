@@ -1,7 +1,7 @@
 package tests;
 
+import allure.JiraIssue;
 import io.qameta.allure.AllureId;
-import io.qameta.allure.Issue;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
@@ -18,7 +18,7 @@ public class MerchantPageTests extends TestBase {
 
     @DisplayName("Открытие главной страницы")
     @AllureId("1222")
-    @Issue("QC-7")
+    @JiraIssue("QC-7")
     @Test
     public void openMerchantPageTest() {
 
@@ -32,7 +32,7 @@ public class MerchantPageTests extends TestBase {
 
     @DisplayName("Переход на страницу единого кошелька")
     @AllureId("1223")
-    @Issue("QC-7")
+    @JiraIssue("QC-7")
     @Test
     public void openWalletPageTest() {
 
