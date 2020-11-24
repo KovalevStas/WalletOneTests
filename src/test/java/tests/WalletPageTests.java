@@ -1,5 +1,7 @@
 package tests;
 
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Issue;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +15,8 @@ import static io.qameta.allure.Allure.step;
 public class WalletPageTests extends TestBase {
 
     @DisplayName("Открытие страницы Единого кошелька")
+    @AllureId("1218")
+    @Issue("QC-7")
     @Test
     public void searchProvidersTest() {
         step("Открываем страницу Единого кошелька", () ->
@@ -31,6 +35,8 @@ public class WalletPageTests extends TestBase {
     }
 
     @DisplayName("Открытие окна информации об офисе")
+    @AllureId("1219")
+    @Issue("QC-7")
     @Test
     public void showInformTest() {
         step("Открываем страницу Единого кошелька", () ->
@@ -49,6 +55,8 @@ public class WalletPageTests extends TestBase {
     }
 
     @DisplayName("Смена языка страницы")
+    @AllureId("1220")
+    @Issue("QC-7")
     @Test
     public void changeLanguageTest() {
         step("Открываем страницу Единого кошелька", () ->

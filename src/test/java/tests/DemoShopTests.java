@@ -1,5 +1,7 @@
 package tests;
 
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Issue;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
@@ -13,6 +15,8 @@ import static io.qameta.allure.Allure.step;
 @Story("Проверка демо магазина")
 public class DemoShopTests extends TestBase {
     @DisplayName("Проверока демо магазина с успешной оплатой")
+    @AllureId("1221")
+    @Issue("QC-7")
     @Test
     public void TestCardRubPositiveTest() {
         step("Открываем главную страницу", () ->
